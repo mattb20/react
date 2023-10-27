@@ -18,10 +18,16 @@ function Header() {
   );
 }
 
+const reactDescriptions = ['fundamentals', 'building blocks', 'essentials'];
+
+function getRandomInt(max: number) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
 function MainGoal() {
   return ( 
       <div>
-       My main goal: learning the fundamentals of React!
+       My main goal: learning the { reactDescriptions[getRandomInt(2)] } of React!
       </div>
   );
 }
