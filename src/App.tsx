@@ -25,11 +25,8 @@ function getRandomInt(max: number) {
 }
 
 function MainGoal() {
-  return (
-    <div>
-      My main goal: learning the {reactDescriptions[getRandomInt(2)]} of React!
-    </div>
-  );
+  const description = reactDescriptions[getRandomInt(2)];
+  return <div>My main goal: learning the {description} of React!</div>;
 }
 
 function Counter() {
