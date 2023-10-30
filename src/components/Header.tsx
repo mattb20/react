@@ -1,7 +1,9 @@
 import reactLogo from '../assets/react.svg';
 import viteLogo from '../../public/vite.svg';
 
-export default function Header(props) {
+export default function Header(props: {
+  title: string
+}): React.JSX.Element {
   return (
     <div>
       <header>

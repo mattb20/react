@@ -8,7 +8,7 @@ function App() {
     <>
       <Header title='Vite + React'></Header>
       <div className='card'>
-        <Counter />
+        <Counter  />
         <MainGoal />
       </div>
       <p className='read-the-docs'>
