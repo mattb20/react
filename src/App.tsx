@@ -2,6 +2,7 @@ import Header from './components/Header.jsx';
 import MainGoal from './components/MainGoal.tsx';
 import Counter from './components/Counter.jsx';
 import './App.css';
+import TabButton from './components/TabButton.tsx';
 
 function App() {
   return (
@@ -11,9 +12,15 @@ function App() {
         <Counter  />
         <MainGoal />
       </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
+      <section id="examples">
+        <h2>Examples</h2>
+        <menu>
+          <TabButton>Components</TabButton>
+          <TabButton>JSX</TabButton>
+          <TabButton>Props</TabButton>
+          <TabButton>State</TabButton>
+        </menu>
+      </section>
     </>
   );
 }
