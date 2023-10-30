@@ -3,9 +3,10 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-function Header() {
+function Header(props) {
   return (
-    <header>
+    <div>
+      <header>
       <div>
         <a href='https://vitejs.dev' target='_blank'>
           <img src={viteLogo} className='logo' alt='Vite logo' />
@@ -15,6 +16,8 @@ function Header() {
         </a>
       </div>
     </header>
+    <h1>{ props.title }</h1>
+    </div>
   );
 }
 
@@ -35,14 +38,13 @@ function Counter() {
     <button onClick={() => setCount((count) => count + 1)}>
       count is {count}
     </button>
-  );
+  );  
 }
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <h1>Vite + React</h1>
+      <Header title="Vite + React"></Header>
       <div className='card'>
         <Counter />
         <MainGoal />
