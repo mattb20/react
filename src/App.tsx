@@ -12,7 +12,7 @@ const sectionDescriptions = {
     details: 'Components are really useful for compartmentalising your front end code and encouraging reusability.'
   },
   jsx: {
-    details: 'Components are really useful for compartmentalising your front end code and encouraging reusability.'
+    details: 'JSX is an extended language of JavaScript which enables you to inbed JavaScript attributes and functions into HTML code to create dynamic front ends.'
   },
   props: {
     details: 'Props can be used as part of the customisable process of creating components.'
