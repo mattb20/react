@@ -1,3 +1,3 @@
-export default function TabButton({ children, onSelect }): React.JSX.Element {
-  return <button onClick={onSelect}>{children}</button>;
+export default function TabButton({ title, onSelect }): React.JSX.Element {
+  return <button onClick={onSelect}>{title}</button>;
 }
