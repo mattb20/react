@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 type Section = 'components' | 'jsx' | 'props' | 'state';
 
-const sectionDescriptions = {
+const sectionDescriptions: Record<string, {details: string}> = {
   components: {
     details:
       'Components are really useful for compartmentalising your front end code and encouraging reusability.',
