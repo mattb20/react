@@ -1,3 +1,4 @@
-export default function TabButton({ title, onSelect }): React.JSX.Element {
-  return <button className="active" onClick={onSelect}>{title}</button>;
+export default function TabButton({ title, onSelect, isSelected }): React.JSX.Element {
+  console.log(isSelected);
+  return (<button className={isSelected ? 'active' : null} onClick={onSelect}>{title}</button>);
 }
