@@ -45,7 +45,7 @@ function App() {
           <TabButton onSelect={() => handleSelect('props')} title={'Props'} />
           <TabButton onSelect={() => handleSelect('state')} title={'State'} />
         </menu>
-        {section}
+        {!section ? 'Please select a topic': <div>{section}</div>}
       </section>
     </>
   );
