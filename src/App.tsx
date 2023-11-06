@@ -7,21 +7,25 @@ import { useState } from 'react';
 
 type Section = 'components' | 'jsx' | 'props' | 'state';
 
+const sectionDescriptions = {
+  components: {
+    details: 'Components are really useful for compartmentalising your front end code and encouraging reusability.'
+  },
+  jsx: {
+    details: 'Components are really useful for compartmentalising your front end code and encouraging reusability.'
+  },
+  props: {
+    details: 'Props can be used as part of the customisable process of creating components.'
+  },
+  state: {
+    details: 'State is the internal snapshot of your component at any time, including all the functions that React defines on the functional component.'
+  },
+};
+
 function App() {
   const [section, setSection] = useState('');
   function handleSelect(section: Section) {
-    if (section === 'components') {
-      setSection('Components are really useful for compartmentalising your front end code and encouraging reusability.');
-    }
-    if (section === 'jsx') {
-        setSection('JSX is a useful extension of JavaScript that allows you to pair HTML elements with executable JavaScript code.');
-    }
-    if (section === 'props') {
-        setSection('Props can be used as part of the customisable process of creating components.');
-    }
-    if (section === 'state') {
-        setSection('State is the internal snapshot of your component at any time, including all the functions that React defines on the functional component.');
-    }
+    setSection(sectionDescriptions[section].details);
   }
   return (
     <>
