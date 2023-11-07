@@ -5,7 +5,7 @@ import './App.css';
 import TabButton from './components/TabButton.tsx';
 import { useState } from 'react';
 
-type Section = 'components' | 'jsx' | 'props' | 'state';
+type Section = 'components' | 'jsx' | 'props' | 'state' | 'bun';
 
 const sectionDescriptions: Record<string, {details: string}> = {
   components: {
@@ -24,6 +24,9 @@ const sectionDescriptions: Record<string, {details: string}> = {
     details:
       'State is the internal snapshot of your component at any time, including all the functions that React defines on the functional component.',
   },
+  bun: {
+    details: 'You should consider deploying your code to be run by the bun JavaScript engine as it could be very fast'
+  }
 };
 
 function App() {
@@ -33,7 +36,7 @@ function App() {
   }
   return (
     <>
-      <Header title='Vite + React'></Header>
+      <Header title="Let's do some React"></Header>
       <div className='card'>
         <Counter />
         <MainGoal />
@@ -60,6 +63,11 @@ function App() {
             isSelected={section === 'state'}
             onSelect={() => handleSelect('state')}
             title={'State'}
+          />
+          <TabButton
+            isSelected={section === 'bun'}
+            onSelect={() => handleSelect('bun')}
+            title={'Bun'}
           />
         </menu>
         {!section ? 'Please select a topic' : <div>{sectionDescriptions[section].details}</div>}
