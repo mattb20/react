@@ -3,31 +3,10 @@ import MainGoal from './components/MainGoal.tsx';
 import Counter from './components/Counter.jsx';
 import './App.css';
 import TabButton from './components/TabButton.tsx';
+import { sectionDescriptions } from './section-descriptions.ts';
 import { useState } from 'react';
 
-type Section = 'components' | 'jsx' | 'props' | 'state' | 'bun';
-
-const sectionDescriptions: Record<string, {details: string}> = {
-  components: {
-    details:
-      'Components are really useful for compartmentalising your front end code and encouraging reusability.',
-  },
-  jsx: {
-    details:
-      'JSX is an extended language of JavaScript which enables you to inbed JavaScript attributes and functions into HTML code to create dynamic front ends.',
-  },
-  props: {
-    details:
-      'Props can be used as part of the customisable process of creating components.',
-  },
-  state: {
-    details:
-      'State is the internal snapshot of your component at any time, including all the functions that React defines on the functional component.',
-  },
-  bun: {
-    details: 'You should consider deploying your code to be run by the bun JavaScript engine as it could be very fast'
-  }
-};
+type Section = 'components' | 'jsx' | 'props' | 'state' | 'bun' | 'gotchas';
 
 function App() {
   const [section, setSection] = useState('');
@@ -68,6 +47,11 @@ function App() {
             isSelected={section === 'bun'}
             onSelect={() => handleSelect('bun')}
             title={'Bun'}
+          />
+          <TabButton
+            isSelected={section === 'gotchas'}
+            onSelect={() => handleSelect('gotchas')}
+            title={'Gotchas'}
           />
         </menu>
         {!section ? 'Please select a topic' : <div>{sectionDescriptions[section].details}</div>}
