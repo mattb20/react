@@ -60,5 +60,10 @@ export const reactConcepts: ReactConcept[] = [
     concept: 'gotchas',
     title: 'Gotchas',
     details: 'JavaScript is a very interesting language. One of the most puzzling features being the concept of truthy and falsy. 0 and undefined are falsy where as [] and {} are truthy. How confusing!',
+  },
+  {
+    concept: 'fragments',
+    title: 'Fragments',
+    details: 'Fragments allow you to avoid wrapping JSX components unnecessarily with unwanted parent HTML elements.'
   }
 ];
